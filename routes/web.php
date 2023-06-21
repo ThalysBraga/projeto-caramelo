@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/**
+ * Usuarios
+ */
+
+$controller = App\Http\Controllers\UsuariosController::class;
+
+
+Route::get('/cadastro/create', [$controller,'create'])->name('cadastro.create');
+Route::post('/cadastro/store', [$controller,'store'])->name('cadastro.store');
+
