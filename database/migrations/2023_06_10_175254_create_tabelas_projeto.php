@@ -26,10 +26,10 @@ return new class extends Migration
             $table->timestamps();
 
             $table->string('nome');
-            $table->string('descricao');
-            $table->string('tipo');
-            $table->string('path_image');
             $table->string('contato');
+            $table->string('tipo');
+            $table->string('descricao');
+            $table->string('path_image');
             $table->foreignId('usuario_id')->constrained('usuarios');
         });
     }
